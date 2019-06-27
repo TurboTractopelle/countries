@@ -16,8 +16,20 @@ describe("<SelectCountry />", () => {
 		expect(
 			wrapper
 				.find("option")
-				.first()
+				.at(0)
+				.text()
+		).toBe("Select");
+		expect(
+			wrapper
+				.find("option")
+				.at(1)
 				.text()
 		).toBe("France");
+		expect(
+			wrapper
+				.find("option")
+				.at(2)
+				.text()
+		).toBe("Brasil");
 	});
 });
